@@ -15,7 +15,8 @@ router.get('/', async function (req, res, next) {
         console.log('Uper');
         console.log(data);
 
-        res.send(data);
+        // res.send(data);
+        res.redirect('http://localhost:3000/no/' + data);
     } else {
         console.log('Niche');
         data = require('../data');
@@ -28,13 +29,11 @@ router.get('/', async function (req, res, next) {
     // res.render('index', data);
 });
 
-// router.post('/hello', async function (req, res, next) {
+// router.get('/hello', async function (req, res, next) {
 //     // console.log(req.body);
-//     rp('').then(body => {
-//         console.log(body);
-//     }).catch(err => {
-//         console.log(err);
-//     });
+//     const accessToken = await authHelper.getAccessToken(req.cookies, res);
+//     const userName = req.cookies.graph_user_name;
+//     console.log(accessToken);
 // });
 
 
