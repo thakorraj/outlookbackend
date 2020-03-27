@@ -11,6 +11,7 @@ require('dotenv').config();
 
 var index = require('./routes/index');
 var authorize = require('./routes/authorize');
+var img=require('./routes/ab')
 // var mail = require('./routes/mail');
 // var calendar = require('./routes/calendar');
 // var contacts = require('./routes/contacts');
@@ -31,6 +32,7 @@ app.use(cookieParser());
 
 app.use('/', index);
 app.use('/authorize', authorize);
+app.use('/img', img);
 // app.use('/mail', mail);
 // app.use('/calendar', calendar);
 // app.use('/contacts', contacts);
